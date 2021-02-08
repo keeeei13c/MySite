@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 
 const Index: NextPage = () => {
   return (
-    <Layout title="fukudakei(layout)">
+    <Layout title="fukudakei">
       <FirstView />
     </Layout>
   );

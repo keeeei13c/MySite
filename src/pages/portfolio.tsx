@@ -4,7 +4,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { Chip, IconButton } from '@material-ui/core'
-// import { Link as LinkIcon, Github as GitHubIcon } from '@material-ui/icons'
+import { Link as LinkIcon, GitHub as GitHubIcon } from '@material-ui/icons'
 import Layout from '../components/layout'
 import GlobalContent from './global'
 
@@ -24,9 +24,8 @@ const WorkItems: Array<Work> = [
     {
         title: 'Portfolio サイト',
         date: '2021.02 - Now',
-        src: '',
-        // link?: null,
-        // github?: null,
+        src: 'static/images/home.png',
+        github: "https://github.com/keeeei13c/portfolio",
         skills: [
             'React',
             'TypeScript',
@@ -147,7 +146,7 @@ const WorkIndex: NextPage = () => {
                                 rel="noopener"
                                 aria-label="Link"
                             >
-                                {/* <LinkIcon /> */}
+                                <LinkIcon />
                             </IconButton>
                             <IconButton
                                 color="inherit"
@@ -157,7 +156,7 @@ const WorkIndex: NextPage = () => {
                                 rel="noopener"
                                 aria-label="Link"
                             >
-                                {/* <GitHubIcon /> */}
+                                <GitHubIcon />
                             </IconButton>
                         </div>
                     </div>
