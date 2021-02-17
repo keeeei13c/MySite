@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import { Chip, IconButton } from '@material-ui/core'
 import { Link as LinkIcon, GitHub as GitHubIcon } from '@material-ui/icons'
 import Layout from '../components/layout'
+import PortfolioFooter from '../components/portfolio-footer'
 import GlobalContent from './global'
 
 
@@ -21,35 +22,36 @@ interface Work {
 }
 
 const WorkItems: Array<Work> = [
-    {
-        title: 'Portfolio サイト',
-        date: '2021.02 - Now',
-        src: 'static/images/home.png',
-        github: "https://github.com/keeeei13c/portfolio",
-        skills: [
-            'React',
-            'TypeScript',
-            'Next.js',
-            'Material-UI',
-            'Vercel'
-        ],
+  {
+    title: 'Portfolio サイト',
+    date: '2021.02 - Now',
+    src: 'static/images/home.png',
+    github: "https://github.com/keeeei13c/portfolio",
+    skills: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Material-UI',
+      'Vercel',
+    ],
         
-        body: (
-            <p>
-                このポートフォリオサイトです。
-                <br />
+    body: (
+      <p>
+        このポートフォリオサイトです。
+        <br />
                 今まではHTML/CSSをつかってのWebサイト制作を行っていましたが、モダンな技術を使用してみたくて作りました。
-                <br />
+        <br />
                 以下のようなことを行っています。
-                <br />
+        <br />
                 ・React/Next.js/TypeScriptで静的サイト
-                <br />
+        <br />
                 ・UIライブラリにMaterial UI
-                <br />
-            </p>
-        ),
-    },
+        <br />
+      </p>
+    ),
+  },
 ];
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -177,11 +179,14 @@ const WorkIndex: NextPage = () => {
             </section>
         )
     })
-    return (
+  return (
+      <>
         <Layout title="portfolio">
             <GlobalContent title="portfolio" subtitle="制作物" />
             {items}
-       </Layout>
+      </Layout>
+      <PortfolioFooter />
+      </>
   )
 };
 
