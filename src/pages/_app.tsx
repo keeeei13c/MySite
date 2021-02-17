@@ -1,5 +1,4 @@
 import CssBaseline from '@material-ui/core/CssBaseline'
-import React, { Component } from 'react'
 import App from 'next/app'
 import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from '@material-ui/core/styles'
