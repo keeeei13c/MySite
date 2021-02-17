@@ -1,8 +1,7 @@
 import React from 'react'
-import { makeStyles, createStyles, Theme } from '@material-ui/core'
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-// import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     first: {
@@ -11,21 +10,15 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         alignItems: 'center',
         justifyContent: 'space-between',
     },
-    firstImage: {
-        height: '100%',
-        marginBottom: theme.spacing(5),
-    },
     firstTitle: {
         fontWeight: 700,
         letterSpacing: theme.spacing(0.5),
-        fontSize: 25,
+        fontSize: 60,
+        marginTop: '180px'
     },
-    // firstText: {
-    //     textAlign: 'center',
-    //     '& > p ': {
-    //         color: theme.palette.text.secondary,
-    //     },
-    // },
+    firstView: {
+        height: '700px',
+    },
 }),
 );
 
@@ -34,14 +27,14 @@ const FirstView: React.FunctionComponent = () => {
 
     return (
         <>
+            <div className={classes.firstView}>
             <section>
                 <Container maxWidth="md" className={classes.first} >
-                    <img src="" alt="" className={classes.firstImage} />
-                    <Typography component="h2" className={classes.firstTitle}>
-                            welcome to my page 
-                    </Typography>
+                    <Typography component="h2" className={classes.firstTitle}>FUKUDA KEI</Typography>
+                             <h3>PORTFOLIO</h3>
                 </Container>
             </section>
+            </div>
         </>
     )
 
