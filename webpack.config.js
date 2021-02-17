@@ -23,8 +23,6 @@ module.exports = {
     // モジュールに適用するルールの設定（ローダーの設定を行う事が多い）
     module: {
         rules: [{
-            // 拡張子が.tsのファイルに対してTypeScriptコンパイラを適用する
-            // Reactで用いる.tsxの拡張子にも適用する場合は test:/\.(ts|tsx)$/,
             test: /\.ts$/,
             loader: 'ts-loader'
         }]
