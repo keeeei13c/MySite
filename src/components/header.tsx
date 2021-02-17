@@ -59,7 +59,7 @@ const Header: React.FunctionComponent<Props> = ({ twitterUrl, githubUrl, siteTit
         <Toolbar className={classes.toolbar}>
             <Link href="/" passHref>
             <MuiLink>
-              Fukuda kei
+              No Code NO Life
             </MuiLink>
             </Link>
           <Nav twitterUrl={twitterUrl} githubUrl={githubUrl} />
