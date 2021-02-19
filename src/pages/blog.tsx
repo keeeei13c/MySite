@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NextPage } from 'next'
 import Layout from '../components/layout'
-// import GlobalContent from './global'
+import GlobalContent from './global'
 
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles'
 
@@ -18,6 +18,7 @@ const BlogIndex: NextPage = () => {
     return (
         <>
             <Layout>
+                <GlobalContent title="blog" subtitle="ブログ"/>
                 <h1>Blog</h1>
             </Layout>
         </>
