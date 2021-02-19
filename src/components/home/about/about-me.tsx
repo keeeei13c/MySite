@@ -3,7 +3,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 // import Typography from '@material-ui/core/Typography'
 import Skills from './skills'
-import Career from '../about-me/career'
+import Career from './career'
 import { Typography } from '@material-ui/core'
 
 

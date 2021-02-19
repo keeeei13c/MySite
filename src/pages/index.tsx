@@ -1,8 +1,8 @@
 import React from 'react'
 import { NextPage } from 'next'
 import FirstView from '../components/home/first-view'
-import AboutSite from '../components/home/about-site'
-import AboutMe from '../components/home/about-me/about-me'
+import AboutSite from '../components/home/about/about-site'
+import AboutMe from '../components/home/about/about-me'
 import Copyright from '../components/home/copy-right'
 import Layout from '../components/layout'
 
