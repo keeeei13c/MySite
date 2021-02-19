@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import { Chip, IconButton } from '@material-ui/core'
 import { Link as LinkIcon, GitHub as GitHubIcon } from '@material-ui/icons'
 import Layout from '../components/layout'
-import PortfolioFooter from '../components/portfolio-footer'
+import PortfolioFooter from '../components/portfolio/footer'
 import GlobalContent from './global'
 
 
