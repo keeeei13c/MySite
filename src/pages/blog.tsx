@@ -1,21 +1,26 @@
 import React, { Component } from 'react'
 import { NextPage } from 'next'
 import Layout from '../components/layout'
-import GlobalContent from './global'
+// import GlobalContent from './global'
 
-const Blog: NextPage = () => {
+import {makeStyles, createStyles, Theme} from '@material-ui/core/styles'
+
+const useStyles = makeStyles((theme: Theme) => {
+    createStyles({
+
+    })
+})
+
+
+const BlogIndex: NextPage = () => {
+    const classes = useStyles();
+
     return (
         <>
             <Layout>
-                <GlobalContent title="blog" subtitle="ブログ" />
-                <Component>
-                    
-                </Component>
+                <h1>Blog</h1>
             </Layout>
         </>
-        
-
     )
 }
-
-export default Blog;
+export default BlogIndex
