@@ -47,6 +47,7 @@ const GlobalContent: React.FunctionComponent<Props> = ({
                     <Typography component={titleComponent}  className={classes.globalTitle}>
                         {title}
                     </Typography>
+                    <p>{subtitle}</p>
                 </div>
             </Container>
         </section>
