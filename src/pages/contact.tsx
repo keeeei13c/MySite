@@ -160,7 +160,7 @@ const Contact: NextPage = () => {
 
     return (
             <Layout title="Contact">
-                <GlobalContent title="Contact" subtitle="連絡" />
+                <GlobalContent title="Contact" subtitle="お問い合わせ" />
             <Container maxWidth="xs">
                 <section className={classes.contact}>
                     <Typography className="text">
