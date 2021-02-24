@@ -59,7 +59,7 @@ const withPost = (meta: Meta) => ({ children }: { children: ReactElement }) => {
       />
       <section className={classes.singlePost}>
         <Container maxWidth="sm">
-          <img src={meta.image} alt="main" className="image" />
+          <img src={meta.image} alt="main" className="blog-image" />
           <MDXProvider components={components}>
             <main className="markdown-body">{children}</main>
           </MDXProvider>
