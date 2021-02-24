@@ -9,8 +9,6 @@ import Layout from '../components/layout'
 import PortfolioFooter from '../components/portfolio/footer'
 import GlobalContent from './global'
 
-
-
 interface Work {
     title: string,
     date: string,
@@ -25,7 +23,7 @@ const WorkItems: Array<Work> = [
   {
     title: 'Portfolio サイト',
     date: '2021.02 - Now',
-    src: "static/images/home.png",
+    src: '/static/images/my-site.png',
     github: "https://github.com/keeeei13c/portfolio",
     skills: [
       'React',
@@ -42,6 +40,7 @@ const WorkItems: Array<Work> = [
                 今まではHTML/CSSをつかってのWebサイト制作を行っていましたが、モダンな技術を使用してみたくて作りました。
         <br />
                 以下のようなことを行っています。
+        <br />
         <br />
                 ・React/Next.js/TypeScriptで静的サイト
         <br />
@@ -182,7 +181,7 @@ const WorkIndex: NextPage = () => {
   return (
       <>
         <Layout title="portfolio">
-            <GlobalContent title="Portfolio" subtitle="制作物" />
+            <GlobalContent title="portfolio" subtitle="制作物" />
             {items}
       </Layout>
       <PortfolioFooter />
