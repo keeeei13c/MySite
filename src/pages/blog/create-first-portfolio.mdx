@@ -6,9 +6,33 @@ export const meta = {
   category: 'dev',
   tag: ['Next.js','TypeScript'],
   url: './blog/create-first-portfolio',
-  image: 'static/images/blog/home.png',
+  image: '/static/images/my-site.png',
 };
 
 export default withPost({...meta});
 
-ポートフォリオサイトを作った
+大学が春休みに入ったので時間に余裕ができたため以前から作りたいと思っていたポートフォリオサイトを作ることにした。
+
+予定では10日でできるはずだったが、型宣言をはじめ様々なエラーに阻まれて15日ほどかかってしまった。  
+
+## やったこと
+
+#### サイト構築： Next.js TypeScript Material UI  
+
+### 今回サイトを作るに当たってNext.jsを採用した理由
+
+正直なところVue(Nuxt.js)でも良かったが、デプロイ先のVercelがNext.jsを開発していることもあり相性が良いということで選択した。
+
+また、TypeScriptが現在stack overflowの開発調査によると人気言語2位でNext（React)と相性が良いのでこちらも選択した。
+（https://stackoverflow.blog/2020/05/27/2020-stack-overflow-developer-survey-results/）  
+
+### CD環境：GitHub Vercel
+GitHubとVercelを連携させているためGitHubにコードに変更があると自動的にVercel上Buildしてデプロイしてくれる。
+
+
+## 今後実装したい機能
+
+- AWS SES Lambda API Gatewayをつかってコンタクトフォームを動くようにする
+
+
+
