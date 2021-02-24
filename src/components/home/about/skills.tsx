@@ -5,7 +5,7 @@ import Divider from '@material-ui/core/Divider';
 
 interface AboutMeSkill {
     skills1: Array<string>,
-    skills2: Array<string>,
+    // skills2: Array<string>,
     skills3: Array<string>,
 }
 
@@ -20,12 +20,12 @@ const AboutMeSkills: Array<AboutMeSkill> = [
             'React',
             'Next.js',
         ],
-        skills2: [ 
-            'Ruby',
-            'Ruby on Rails',
-            'MySQL',
-            'AWS',
-        ],
+        // skills2: [ 
+        //     'Ruby',
+        //     'Ruby on Rails',
+        //     'MySQL',
+        //     'AWS',
+        // ],
         skills3: [
             'Visual Studio Code',
             'Slack',
@@ -66,22 +66,23 @@ const Skills: React.FunctionComponent = () => {
             </div>
         )
     }) 
-    const skills2 = AboutMeSkills.map(AboutMeSkill => {
-        return (
-            <div className={classes.skills}>
-                {AboutMeSkill.skills2.map(skill => {
-                    return (
-                        <Chip
-                            key={skill}
-                            label={skill}
-                            color="primary"
-                            variant="outlined"
-                        />
-                    );
-                })}
-            </div>
-        )
-    }) 
+    //skill2のスキルを取得したら解禁
+    // const skills2 = AboutMeSkills.map(AboutMeSkill => {
+    //     return (
+    //         <div className={classes.skills}>
+    //             {AboutMeSkill.skills2.map(skill => {
+    //                 return (
+    //                     <Chip
+    //                         key={skill}
+    //                         label={skill}
+    //                         color="primary"
+    //                         variant="outlined"
+    //                     />
+    //                 );
+    //             })}
+    //         </div>
+    //     )
+    // }) 
     const skills3 = AboutMeSkills.map(AboutMeSkill => {
         return (
             <div className={classes.skills}>
@@ -103,8 +104,8 @@ const Skills: React.FunctionComponent = () => {
         <>
                     {skills1} 
                     <Divider />
-                    {skills2} 
-                    <Divider />
+                    {/* {skills2} 
+                    <Divider /> */}
                     {skills3}
                     <Divider />
             </>
