@@ -2,7 +2,9 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import App from 'next/app'
 import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from '@material-ui/core/styles'
+
 import theme from '../components/theme'
+import '../styles/markdown.css'
 export default class MyApp extends App {
     componentDidMount() {
         const jssStyles = document.querySelector('#jss-server-side');
