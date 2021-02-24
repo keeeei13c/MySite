@@ -38,9 +38,9 @@ const AboutSite: React.FunctionComponent = () => {
                             <p>ご覧いただきありがとうございます。</p>
                             <p>React、Nextのtutorialを一通りやったあと勉強の延長で作りました。</p>
                             <p>サイトの目的としては制作物とGitHubを一箇所にまとめるためにあります。</p>
-                            <p>使用技術はReact、Next、TypeScript、AWS（SES、Gateway、lambda）、Material UIです。</p>
+                            <p>使用技術はReact.js、Next.js、TypeScript、Material UIです。</p>
                             <p>TypeScriptは初めて使ったのですが、型宣言に慣れるまで本当に何度も叱られました。</p>
-                            <p>このサイト制作を終えてTSと少し仲良くなれたので嬉しいです。</p>
+                            <p>このサイト制作を終えて少し成長を感じられました。</p>
                             <p>製作期間：15日</p>
                         </div>
                     </Container>
