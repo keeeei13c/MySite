@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     imageWrapper: {
         // backgroundColor: '#000',
-        width: '400px',
-        height: '400px',
+        width: '300px',
+        height: '300px',
         position: 'relative',
     },
     careerWrapper: {
@@ -61,7 +61,7 @@ const AboutMe: React.FunctionComponent = () => {
                     </Typography>
                         <div className={classes.wrapper}>
                             <div className={classes.imageWrapper}>
-                            <img src="static/images/oswald-min.png"
+                            <img src="static/images/about-me.png"
                                 className={classes.image} />
                         </div>
                         <div className={classes.careerWrapper}>
