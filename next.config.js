@@ -11,7 +11,7 @@ const withMDX = require('@next/mdx')({
 
 module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'tx', 'tsx', 'md', 'mdx'],
-  exportTrailingSlash: true,
+  trailingSlash: true,
   async exportPathMap() {
     const paths = {
       '/': {
