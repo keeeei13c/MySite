@@ -25,7 +25,7 @@ const WorkItems: Array<Work> = [
   {
     title: 'Portfolio サイト',
     date: '2021.02 - Now',
-    src: 'static/images/home.png',
+    src: "static/images/home.png",
     github: "https://github.com/keeeei13c/portfolio",
     skills: [
       'React',
@@ -182,7 +182,7 @@ const WorkIndex: NextPage = () => {
   return (
       <>
         <Layout title="portfolio">
-            <GlobalContent title="portfolio" subtitle="制作物" />
+            <GlobalContent title="Portfolio" subtitle="制作物" />
             {items}
       </Layout>
       <PortfolioFooter />

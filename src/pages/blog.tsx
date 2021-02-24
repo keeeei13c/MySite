@@ -121,7 +121,7 @@ const BlogIndex: NextPage = () => {
         <>
             <Layout>
                 <SocialMeta title="Blog" url="https://keeeei13c/blog"/>
-                <GlobalContent title="blog" subtitle="ブログ"/>
+                <GlobalContent title="Blog" subtitle="ブログ"/>
                 <section className={classes.postList}>
                     <Container maxWidth="md" className="container">
                         {items}
