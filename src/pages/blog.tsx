@@ -119,7 +119,7 @@ const BlogIndex: NextPage = () => {
 
     return (
         <>
-            <Layout>
+            <Layout title="blog">
                 <SocialMeta title="Blog" url="https://keeeei13c/blog"/>
                 <GlobalContent title="Blog" subtitle="ブログ"/>
                 <section className={classes.postList}>
