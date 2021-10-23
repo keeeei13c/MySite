@@ -4472,10 +4472,10 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.npmjs.org/markdown-escapes/-/markdown-escapes-1.0.4.tgz"
   integrity sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==
 
-material-icons@0.5.3:
-  version "0.5.3"
-  resolved "https://registry.npmjs.org/material-icons/-/material-icons-0.5.3.tgz"
-  integrity sha512-LL4pqS7/wX/LmeVkqpmEQX2LFIC8BBoQO6NDZKmItg/MgsW1BpzHJX+YR1S0tmgGh5WnhIn7ZJCKvj8MT3Liew==
+material-icons@0.7.7:
+  version "0.7.7"
+  resolved "https://registry.npmjs.org/material-icons/-/material-icons-0.7.7.tgz"
+  integrity sha512-WzHzL+/QlcCRbF2aCElgv6r0ViRateatEQP/UOA502PitZNFF2BJIcGpzvJmMPShktkhhrLAFx+elDN7DcjXVQ==
 
 md5.js@^1.3.4:
   version "1.3.5"
