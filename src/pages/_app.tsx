@@ -6,24 +6,22 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import theme from '../components/theme'
 import '../styles/markdown.css'
 export default class MyApp extends App {
-    componentDidMount() {
-        const jssStyles = document.querySelector('#jss-server-side');
-        if (jssStyles && jssStyles.parentElement) {
-            jssStyles.parentElement.removeChild(jssStyles);
-        }
+  componentDidMount() {
+    const jssStyles = document.querySelector('#jss-server-side')
+    if (jssStyles && jssStyles.parentElement) {
+      jssStyles.parentElement.removeChild(jssStyles)
     }
-    render() {
-        const { Component, pageProps, router } = this.props
-        
-        return (
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <AnimatePresence exitBeforeEnter>
-                     <Component {...pageProps} key={router.route} />
-                </AnimatePresence>
-            </ThemeProvider>
-        )
-    }
+  }
+  render() {
+    const { Component, pageProps, router } = this.props
+
+    return (
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </ThemeProvider>
+    )
+  }
 }
-
-

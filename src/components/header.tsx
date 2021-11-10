@@ -39,35 +39,32 @@ const useStyles = makeStyles((theme: Theme) =>
     small: {
       fontSize: '0.4em',
     },
-  }),
-);
+  })
+)
 
 interface Props {
-  siteTitle: string,
-  siteDescription: string,
-  twitterUrl: string,
-  githubUrl: string,
+  siteTitle: string
+  siteDescription: string
+  twitterUrl: string
+  githubUrl: string
   siteTitleComponent: React.ElementType
 }
 
 const Header: React.FunctionComponent<Props> = ({ twitterUrl, githubUrl, siteTitleComponent }) => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <AppBar position="sticky" className={classes.navbar}>
       <Container maxWidth="md" className={classes.container}>
         <Toolbar className={classes.toolbar}>
-            <Link href="/" passHref>
-            <MuiLink>
-              大学生エンジニアの活動記録
-            </MuiLink>
-            </Link>
+          <Link href="/" passHref>
+            <MuiLink>大学生エンジニアの活動記録</MuiLink>
+          </Link>
           <Nav twitterUrl={twitterUrl} githubUrl={githubUrl} />
         </Toolbar>
       </Container>
     </AppBar>
-  );
-};
+  )
+}
 
-
-export default Header;
+export default Header

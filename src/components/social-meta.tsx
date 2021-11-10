@@ -1,22 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
 
-interface Meta{
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  keywords?: string;
+interface Meta {
+  title?: string
+  description?: string
+  image?: string
+  url?: string
+  keywords?: string
 }
 
-const SocialMeta: React.FunctionComponent<Meta> = ({
-
-  title,
-  description,
-  image,
-  url,
-  keywords,
-}) => (
+const SocialMeta: React.FunctionComponent<Meta> = ({ title, description, image, url, keywords }) => (
   <Head>
     <meta name="twitter:creator" content="keeeei13c" />
     <meta name="twitter:card" content="summary" />
@@ -28,10 +21,10 @@ const SocialMeta: React.FunctionComponent<Meta> = ({
     {image ? (
       <meta name="og:image" content={`https://keeeei13c${image}`} />
     ) : (
-        <meta name="or:image" content="https://keeeei13c/static/images/my-site.png"/>
-      )}
+      <meta name="or:image" content="https://keeeei13c/static/images/my-site.png" />
+    )}
     {keywords && <meta name="keyword" content={keywords} />}
   </Head>
-);
+)
 
-export default SocialMeta;
+export default SocialMeta

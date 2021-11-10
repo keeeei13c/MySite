@@ -1,18 +1,16 @@
-import React, { ReactElement } from 'react';
-import NextLink from 'next/link';
-import { MDXProvider } from '@mdx-js/react';
-import dataformat from 'dateformat';
+import React, { ReactElement } from 'react'
+import NextLink from 'next/link'
+import { MDXProvider } from '@mdx-js/react'
+import dataformat from 'dateformat'
 
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
+import { Button } from '@material-ui/core'
 
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import { Button } from '@material-ui/core';
-
-import components from './blog-components';
-import Layout from '../layout';
-import SocialMeta from '../social-meta';
-import BlogLayout from './blog-layout';
-
+import components from './blog-components'
+import Layout from '../layout'
+import SocialMeta from '../social-meta'
+import BlogLayout from './blog-layout'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -27,21 +25,21 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       '& main': {},
     },
-  }),
-);
+  })
+)
 
 interface Meta {
-  title: string;
-  image: string;
-  url?: string;
-  category: string;
-  tag: string[];
-  date: string;
+  title: string
+  image: string
+  url?: string
+  category: string
+  tag: string[]
+  date: string
 }
 
 const withPost = (meta: Meta) => ({ children }: { children: ReactElement }) => {
-  const classes = useStyles();
-  const date = dataformat(meta.date ? new Date(meta.date) : new Date(), 'yyyy.mm.dd HH:MM');
+  const classes = useStyles()
+  const date = dataformat(meta.date ? new Date(meta.date) : new Date(), 'yyyy.mm.dd HH:MM')
 
   return (
     <Layout title={`Blog - ${meta.title}`} siteTitleComponent="h3">
@@ -50,13 +48,7 @@ const withPost = (meta: Meta) => ({ children }: { children: ReactElement }) => {
         // url={`${meta.url}`}
         image={`${meta.image}`}
       />
-      <BlogLayout
-        title={meta.title}
-        date={date}
-        titleComponent="h1"
-        category={meta.category}
-        tag={meta.tag}
-      />
+      <BlogLayout title={meta.title} date={date} titleComponent="h1" category={meta.category} tag={meta.tag} />
       <section className={classes.singlePost}>
         <Container maxWidth="sm">
           <img src={meta.image} alt="main" className="blog-image" />
@@ -75,7 +67,7 @@ const withPost = (meta: Meta) => ({ children }: { children: ReactElement }) => {
         </Container>
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default withPost;
+export default withPost
