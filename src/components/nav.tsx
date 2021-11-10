@@ -1,18 +1,17 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import NextLink from 'next/link';
-import clsx from 'clsx';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Hidden, IconButton } from '@material-ui/core';
-import MuiLink from '@material-ui/core/Link';
-import Drawer from '@material-ui/core/Drawer';
-import Divider from '@material-ui/core/Divider';
-import Tooltip from '@material-ui/core/Tooltip';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
-
+import React from 'react'
+import { useRouter } from 'next/router'
+import NextLink from 'next/link'
+import clsx from 'clsx'
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import { Hidden, IconButton } from '@material-ui/core'
+import MuiLink from '@material-ui/core/Link'
+import Drawer from '@material-ui/core/Drawer'
+import Divider from '@material-ui/core/Divider'
+import Tooltip from '@material-ui/core/Tooltip'
+import MenuIcon from '@material-ui/icons/Menu'
+import CloseIcon from '@material-ui/icons/Close'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import TwitterIcon from '@material-ui/icons/Twitter'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -103,39 +102,36 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     socialLinks: {},
-  }),
-);
+  })
+)
 
 interface Props {
-  twitterUrl: string,
+  twitterUrl: string
   githubUrl: string
 }
 
-const Nav: React.FunctionComponent<Props> = props => {
-  const classes = useStyles();
+const Nav: React.FunctionComponent<Props> = (props) => {
+  const classes = useStyles()
 
   const [state, setState] = React.useState({
     right: false,
-  });
+  })
 
-  const { twitterUrl, githubUrl } = props;
+  const { twitterUrl, githubUrl } = props
 
-  const { pathname, route } = useRouter();
+  const { pathname, route } = useRouter()
 
-  type DrawerSide = 'right';
-  const toggleDrawer = (side: DrawerSide, open: boolean) => (
-    event: React.KeyboardEvent | React.MouseEvent,
-  ) => {
+  type DrawerSide = 'right'
+  const toggleDrawer = (side: DrawerSide, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (
       event.type === 'keydown' &&
-      ((event as React.KeyboardEvent).key === 'Tab' ||
-        (event as React.KeyboardEvent).key === 'Shift')
+      ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
     ) {
-      return;
+      return
     }
 
-    setState({ ...state, [side]: open });
-  };
+    setState({ ...state, [side]: open })
+  }
 
   const menuLinks = (
     <>
@@ -179,34 +175,22 @@ const Nav: React.FunctionComponent<Props> = props => {
         </MuiLink>
       </NextLink>
     </>
-  );
+  )
 
   const socialLinks = (
     <div className={classes.socialLinks}>
       <Tooltip title="Twitter" arrow>
-        <IconButton
-          color="inherit"
-          href={twitterUrl}
-          target="_blank"
-          rel="noopener"
-          aria-label="Twitter"
-        >
+        <IconButton color="inherit" href={twitterUrl} target="_blank" rel="noopener" aria-label="Twitter">
           <TwitterIcon />
         </IconButton>
       </Tooltip>
       <Tooltip title="GitHub" arrow>
-        <IconButton
-          color="inherit"
-          href={githubUrl}
-          target="_blank"
-          rel="noopener"
-          aria-label="GitHub"
-        >
+        <IconButton color="inherit" href={githubUrl} target="_blank" rel="noopener" aria-label="GitHub">
           <GitHubIcon />
         </IconButton>
       </Tooltip>
     </div>
-  );
+  )
 
   const sideList = (side: DrawerSide) => (
     <div className={classes.drawer}>
@@ -220,7 +204,7 @@ const Nav: React.FunctionComponent<Props> = props => {
       <Divider />
       <Hidden smUp>{socialLinks}</Hidden>
     </div>
-  );
+  )
 
   return (
     <nav className={classes.nav}>
@@ -228,12 +212,7 @@ const Nav: React.FunctionComponent<Props> = props => {
       <Hidden xsDown>{socialLinks}</Hidden>
       <Hidden mdUp>
         <div>
-          <IconButton
-            color="inherit"
-            edge="end"
-            onClick={toggleDrawer('right', true)}
-            aria-label="Menu Open"
-          >
+          <IconButton color="inherit" edge="end" onClick={toggleDrawer('right', true)} aria-label="Menu Open">
             <MenuIcon />
           </IconButton>
         </div>
@@ -242,7 +221,7 @@ const Nav: React.FunctionComponent<Props> = props => {
         </Drawer>
       </Hidden>
     </nav>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

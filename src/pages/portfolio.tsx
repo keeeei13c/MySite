@@ -10,13 +10,13 @@ import PortfolioFooter from '../components/portfolio/footer'
 import GlobalContent from './global'
 
 interface Work {
-    title: string,
-    date: string,
-    src: string,
-    link?: string,
-    github?: string,
-    skills: Array<string>,
-    body: ReactElement,
+  title: string
+  date: string
+  src: string
+  link?: string
+  github?: string
+  skills: Array<string>
+  body: ReactElement
 }
 
 const WorkItems: Array<Work> = [
@@ -24,33 +24,26 @@ const WorkItems: Array<Work> = [
     title: 'Portfolio サイト',
     date: '2021.02 - Now',
     src: '/static/images/my-site.png',
-    github: "https://github.com/keeeei13c/portfolio",
-    skills: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Material-UI',
-      'Vercel',
-    ],
-        
+    github: 'https://github.com/keeeei13c/portfolio',
+    skills: ['React', 'TypeScript', 'Next.js', 'Material-UI', 'Vercel'],
+
     body: (
       <p>
         このポートフォリオサイトです。
         <br />
-                今まではHTML/CSSをつかってのWebサイト制作を行っていましたが、モダンな技術を使用してみたくて作りました。
+        今まではHTML/CSSをつかってのWebサイト制作を行っていましたが、モダンな技術を使用してみたくて作りました。
         <br />
-                以下のようなことを行っています。
+        以下のようなことを行っています。
         <br />
         <br />
-                ・React/Next.js/TypeScriptで静的サイト
+        ・React/Next.js/TypeScriptで静的サイト
         <br />
-                ・UIライブラリにMaterial UI
+        ・UIライブラリにMaterial UI
         <br />
       </p>
     ),
   },
-];
-
+]
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -126,67 +119,65 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: theme.spacing(0.5),
       },
     },
-  }),
-);
+  })
+)
 
 const WorkIndex: NextPage = () => {
-    const classes = useStyles();
+  const classes = useStyles()
 
-    const items = WorkItems.map(WorkItem => {
-        return (
-            <section className={classes.workItem}>
-                <Container maxWidth='md' className='container'>
-                    <div className="sectionHeader">
-                        <img src={WorkItem.src} alt={WorkItem.title} className="image" />
-                        <div style={{ textAlign: 'center' }} className="link-icons">
-                            <IconButton
-                                color="inherit"
-                                href={WorkItem.link ?? ''}
-                                disabled={!WorkItem.link}
-                                target="_blank"
-                                rel="noopener"
-                                aria-label="Link"
-                            >
-                                <LinkIcon />
-                            </IconButton>
-                            <IconButton
-                                color="inherit"
-                                href={WorkItem.github ?? ''}
-                                disabled={!WorkItem.github}
-                                target="_blank"
-                                rel="noopener"
-                                aria-label="Link"
-                            >
-                                <GitHubIcon />
-                            </IconButton>
-                        </div>
-                    </div>
-                    <div className="sectionBody">
-                        <Typography component="h2" className="title">
-                            {WorkItem.body}
-                        </Typography>
-                        <p className="date">{WorkItem.date}</p>
-                        <div className="skills">
-                            {WorkItem.skills.map(skill => {
-                                return (
-                                    <Chip key={skill} size="small" label={skill} color="primary" variant="outlined" />
-                                );
-                            })}
-                        </div>
-                    </div>
-                </Container>
-            </section>
-        )
-    })
+  const items = WorkItems.map((WorkItem) => {
+    return (
+      <section className={classes.workItem}>
+        <Container maxWidth="md" className="container">
+          <div className="sectionHeader">
+            <img src={WorkItem.src} alt={WorkItem.title} className="image" />
+            <div style={{ textAlign: 'center' }} className="link-icons">
+              <IconButton
+                color="inherit"
+                href={WorkItem.link ?? ''}
+                disabled={!WorkItem.link}
+                target="_blank"
+                rel="noopener"
+                aria-label="Link"
+              >
+                <LinkIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                href={WorkItem.github ?? ''}
+                disabled={!WorkItem.github}
+                target="_blank"
+                rel="noopener"
+                aria-label="Link"
+              >
+                <GitHubIcon />
+              </IconButton>
+            </div>
+          </div>
+          <div className="sectionBody">
+            <Typography component="h2" className="title">
+              {WorkItem.body}
+            </Typography>
+            <p className="date">{WorkItem.date}</p>
+            <div className="skills">
+              {WorkItem.skills.map((skill) => {
+                return <Chip key={skill} size="small" label={skill} color="primary" variant="outlined" />
+              })}
+            </div>
+          </div>
+        </Container>
+      </section>
+    )
+  })
   return (
-      <>
-        <Layout title="portfolio">
-            <GlobalContent title="portfolio" subtitle="制作物" />
-            {items}
+    <>
+      <Layout title="portfolio">
+        <GlobalContent title="portfolio" subtitle="制作物" />
+        {items}
       </Layout>
       <PortfolioFooter />
-      </>
+    </>
   )
-};
+}
 
-export default WorkIndex;
+export default WorkIndex

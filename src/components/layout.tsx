@@ -1,8 +1,8 @@
-import React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Head from 'next/head';
-import Header from './header';
-import {motion} from 'framer-motion'
+import React from 'react'
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
+import Head from 'next/head'
+import Header from './header'
+import { motion } from 'framer-motion'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,15 +14,15 @@ const useStyles = makeStyles((theme: Theme) =>
         },
       },
     },
-  }),
-);
+  })
+)
 
 interface Props {
-  title?: string;
-  description?: string;
-  twitterUrl?: string;
-  githubUrl?: string;
-  siteTitleComponent?: React.ElementType;
+  title?: string
+  description?: string
+  twitterUrl?: string
+  githubUrl?: string
+  siteTitleComponent?: React.ElementType
 }
 
 const Layout: React.FunctionComponent<Props> = ({
@@ -33,7 +33,7 @@ const Layout: React.FunctionComponent<Props> = ({
   siteTitleComponent = 'h1',
   children,
 }) => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <>
@@ -70,7 +70,7 @@ const Layout: React.FunctionComponent<Props> = ({
         </main>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
