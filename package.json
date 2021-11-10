@@ -10,7 +10,7 @@
     "lint-fix": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}'"
   },
   "dependencies": {
-    "@babel/runtime": "7.13.6",
+    "@babel/runtime": "7.16.3",
     "@fortawesome/fontawesome-free": "5.15.2",
     "@karuga/slides": "1.0.0",
     "@material-ui/core": "4.11.3",
