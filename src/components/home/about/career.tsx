@@ -18,7 +18,7 @@ const Career: React.FunctionComponent = () => {
       <div className={classes.careerText}>
         <Divider />
         <p>福田 圭</p>
-        <Disvider />
+        <Divider />
         <p>23卒文系大学生</p>
         <Divider />
         <p>趣味：美術館巡り</p>
